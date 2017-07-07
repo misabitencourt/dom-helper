@@ -1,0 +1,35 @@
+{
+  "name": "dom-helper",
+  "version": "1.0.0",
+  "description": "HTML DOM manipulation helper with window global functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "node node_modules/babel-cli/bin/babel.js index.js --out-file ./dist/dom-helper.min.js",
+    "minify": "node node_modules/uglify-js/bin/uglifyjs ./dist/dom-helper.min.js --compress --output ./dist/dom-helper.min.js",
+    "build": "npm run transpile && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/misabitencourt/dom-helper.git"    
+  },
+  "keywords": [
+    "DOM",
+    "HTML",
+    "element",
+    "helper"
+  ],
+  "author": "Misael Braga de Bitencourt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misabitencourt/dom-helper/issues"
+  },
+  "homepage": "https://github.com/misabitencourt/dom-helper#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "uglify-js": "^3.0.23"
+  }
+}
