@@ -167,6 +167,7 @@ window.createEls = (tagName, className, parent, childs, textContent) => {
         }
         if (child.type) {
             childEl.type = child.type
+            childEl.name = child.name
         }
     })
     
