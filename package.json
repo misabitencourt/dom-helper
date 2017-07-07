@@ -1,6 +1,6 @@
 {
-  "name": "dom-helper",
-  "version": "1.0.0",
+  "name": "npm-dom-helper",
+  "version": "1.1.0",
   "description": "HTML DOM manipulation helper with window global functions",
   "main": "index.js",
   "scripts": {

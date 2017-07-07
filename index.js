@@ -164,7 +164,10 @@ window.createEls = (tagName, className, parent, childs, textContent) => {
         }
         if (child.on && child.on.length === 2) {
             childEl.addEventListener(child.on[0], child.on[1].bind(child))
-        }            
+        }
+        if (child.type) {
+            childEl.type = child.type
+        }
     })
     
     return el
