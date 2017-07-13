@@ -169,6 +169,11 @@ window.createEls = (tagName, className, parent, childs, textContent) => {
             childEl.type = child.type
             childEl.name = child.name
         }
+        if (child.attrs) {
+            for (let i in child.attrs) {
+                childEl.setAttribute(i, child.attrs[i])
+            }
+        }
     })
     
     return el
