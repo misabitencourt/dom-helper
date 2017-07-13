@@ -25,21 +25,19 @@ window.getParent = (el, selector) => {
 }
 
 window.getParents = (el, selector) => {
+    let result = [];
+
     if (! (el && selector)) {
-        return null;
+        return result;
     }
 
-    do {
-        let parent = el.parentElement;
-        if (! parent) {
-            return null;
-        }
+    let parent = el.parentElement;
+    while (parent) {        
+        parent.matches(selector) && result.push(parent);        
+        parent = parent.parentElement;
+    }
 
-        let child = parent.querySelectorAll(selector)
-        if (child) {
-            return getEls(parent, selector);
-        }
-    } while (true);
+    return result;
 }
 
 window.elUpLevel = (el, levels) => {
